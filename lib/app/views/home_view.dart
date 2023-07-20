@@ -1,3 +1,4 @@
+import 'package:currency_converter/app/components/currency_box.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
@@ -24,52 +25,9 @@ class _HomeViewState extends State<HomeView> {
                 Padding(
                     padding: const EdgeInsets.only(bottom: 40),
                     child: Image.asset('assets/images/logo.png', width: 150)),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: SizedBox(
-                            height: 56.5,
-                            child: DropdownButton(
-                              value: 'real',
-                              isExpanded: true,
-                              underline: Container(
-                                height: 1,
-                                color: Colors.amber,
-                              ),
-                              items: const [
-                                DropdownMenuItem(
-                                  value: 'real',
-                                  child: Text('Real'),
-                                ),
-                                DropdownMenuItem(
-                                  value: 'dolar',
-                                  child: Text('Dolar'),
-                                )
-                              ],
-                              onChanged: (value) {},
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 20),
-                        Expanded(
-                            flex: 2,
-                            child: TextField(
-                              onChanged: (value) {},
-                              decoration: const InputDecoration(
-                                enabledBorder: UnderlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: Colors.amber)),
-                                focusedBorder: UnderlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: Colors.amber)),
-                              ),
-                            )),
-                      ]),
-                ),
+                const CurrecyBox(),
+                const SizedBox(height: 20),
+                const CurrecyBox(),
                 Padding(
                   padding: const EdgeInsets.only(top: 40),
                   child: ElevatedButton(
