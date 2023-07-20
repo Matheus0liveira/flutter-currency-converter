@@ -12,6 +12,7 @@ class CurrecyBox extends StatelessWidget {
           height: 56.5,
           child: DropdownButton(
             value: 'real',
+            iconEnabledColor: Colors.amber,
             isExpanded: true,
             underline: Container(
               height: 1,
